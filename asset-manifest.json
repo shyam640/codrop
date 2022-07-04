@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.7fe04ca5.css",
-    "main.js": "/static/js/main.479161a7.js",
-    "static/js/787.424581ce.chunk.js": "/static/js/787.424581ce.chunk.js",
-    "static/media/commin_soon.png": "/static/media/commin_soon.539cf09081a826480035.png",
-    "static/media/logo.png": "/static/media/logo.32c2ffbc838502f698ee.png",
-    "service-worker.js": "/service-worker.js",
-    "static/media/bottom_circle_shadow.png": "/static/media/bottom_circle_shadow.215469d205e6f99ae32b.png",
-    "static/media/codechef.png": "/static/media/codechef.bcdfd2357a88ee0e469e.png",
-    "static/media/leetcode.png": "/static/media/leetcode.c78fc082f2b4c496259f.png",
-    "static/media/login_avatar.png": "/static/media/login_avatar.e5117e8e0cea57c9a92f.png",
-    "static/media/logo_text.png": "/static/media/logo_text.a57a06bfba418c2f38b8.png",
-    "static/media/codeforces.png": "/static/media/codeforces.d22b5260605abf0255a7.png",
-    "index.html": "/index.html",
-    "main.7fe04ca5.css.map": "/static/css/main.7fe04ca5.css.map",
-    "main.479161a7.js.map": "/static/js/main.479161a7.js.map",
-    "787.424581ce.chunk.js.map": "/static/js/787.424581ce.chunk.js.map"
+    "main.css": "/codrop/static/css/main.7fe04ca5.css",
+    "main.js": "/codrop/static/js/main.e1be9606.js",
+    "static/js/787.424581ce.chunk.js": "/codrop/static/js/787.424581ce.chunk.js",
+    "static/media/commin_soon.png": "/codrop/static/media/commin_soon.539cf09081a826480035.png",
+    "static/media/logo.png": "/codrop/static/media/logo.32c2ffbc838502f698ee.png",
+    "service-worker.js": "/codrop/service-worker.js",
+    "static/media/bottom_circle_shadow.png": "/codrop/static/media/bottom_circle_shadow.215469d205e6f99ae32b.png",
+    "static/media/codechef.png": "/codrop/static/media/codechef.bcdfd2357a88ee0e469e.png",
+    "static/media/leetcode.png": "/codrop/static/media/leetcode.c78fc082f2b4c496259f.png",
+    "static/media/login_avatar.png": "/codrop/static/media/login_avatar.e5117e8e0cea57c9a92f.png",
+    "static/media/logo_text.png": "/codrop/static/media/logo_text.a57a06bfba418c2f38b8.png",
+    "static/media/codeforces.png": "/codrop/static/media/codeforces.d22b5260605abf0255a7.png",
+    "index.html": "/codrop/index.html",
+    "main.7fe04ca5.css.map": "/codrop/static/css/main.7fe04ca5.css.map",
+    "main.e1be9606.js.map": "/codrop/static/js/main.e1be9606.js.map",
+    "787.424581ce.chunk.js.map": "/codrop/static/js/787.424581ce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7fe04ca5.css",
-    "static/js/main.479161a7.js"
+    "static/js/main.e1be9606.js"
   ]
 }

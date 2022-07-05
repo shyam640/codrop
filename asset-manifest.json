@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/codrop/static/css/main.7fe04ca5.css",
-    "main.js": "/codrop/static/js/main.f9da9a07.js",
+    "main.css": "/codrop/static/css/main.90cfe92c.css",
+    "main.js": "/codrop/static/js/main.131a44b7.js",
     "static/js/787.424581ce.chunk.js": "/codrop/static/js/787.424581ce.chunk.js",
     "static/media/commin_soon.png": "/codrop/static/media/commin_soon.539cf09081a826480035.png",
     "static/media/logo.png": "/codrop/static/media/logo.32c2ffbc838502f698ee.png",
@@ -13,12 +13,12 @@
     "static/media/logo_text.png": "/codrop/static/media/logo_text.a57a06bfba418c2f38b8.png",
     "static/media/codeforces.png": "/codrop/static/media/codeforces.d22b5260605abf0255a7.png",
     "index.html": "/codrop/index.html",
-    "main.7fe04ca5.css.map": "/codrop/static/css/main.7fe04ca5.css.map",
-    "main.f9da9a07.js.map": "/codrop/static/js/main.f9da9a07.js.map",
+    "main.90cfe92c.css.map": "/codrop/static/css/main.90cfe92c.css.map",
+    "main.131a44b7.js.map": "/codrop/static/js/main.131a44b7.js.map",
     "787.424581ce.chunk.js.map": "/codrop/static/js/787.424581ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fe04ca5.css",
-    "static/js/main.f9da9a07.js"
+    "static/css/main.90cfe92c.css",
+    "static/js/main.131a44b7.js"
   ]
 }

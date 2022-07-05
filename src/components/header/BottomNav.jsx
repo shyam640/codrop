@@ -13,14 +13,14 @@ const user = JSON.parse(localStorage.getItem("user"));
 const BottomNav = () => {
   const [activeNav, setActiveNav] = useState("/");
   return (
-    <nav className="flex py-1 justify-evenly shadow-[0_35px_60px_25px_rgb(0,0,0)] lg:hidden gap-4 sm:gap-8 items-center w-full sm:w-max sm:px-4 z-50 bg-gradient-to-br from-cyan-300 to-blue-500 hover:text-black hover:font-bold fixed bottom-0 rounded-t-xl">
+    <nav className="flex py-1 justify-center shadow-[0_35px_60px_25px_rgb(0,0,0)] lg:hidden gap-4 sm:gap-8 items-center w-full sm:w-max sm:px-4 z-50 bg-gradient-to-br from-cyan-300 to-blue-500 hover:text-black hover:font-bold fixed bottom-0 rounded-t-xl">
       <Link
         to={"/"}
         onClick={() => setActiveNav("/")}
         className={
           activeNav === "/"
-            ? "active text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
-            : "text-2xl flex text-textColor hover:text-black hover:font-bold items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            ? "active text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            : "text-4xl flex text-textColor hover:text-black hover:font-bold items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
         }
       >
         <BiHomeAlt />
@@ -31,8 +31,8 @@ const BottomNav = () => {
         onClick={() => setActiveNav("/library")}
         className={
           activeNav === "/library"
-            ? "active text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
-            : "text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            ? "active text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            : "text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
         }
       >
         <MdLocalLibrary />
@@ -43,8 +43,8 @@ const BottomNav = () => {
         onClick={() => setActiveNav("/collab")}
         className={
           activeNav === "/collab"
-            ? "active text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
-            : "text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            ? "active text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            : "text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
         }
       >
         <FcCollaboration />
@@ -55,8 +55,8 @@ const BottomNav = () => {
         onClick={() => setActiveNav("/ai-news")}
         className={
           activeNav === "/ai-news"
-            ? "active text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
-            : "text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            ? "active text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+            : "text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
         }
       >
         <GiNewspaper />
@@ -69,8 +69,8 @@ const BottomNav = () => {
           onClick={() => setActiveNav("/ai-news")}
           className={
             activeNav === "/ai-news"
-              ? "active text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
-              : "text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+              ? "active text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+              : "text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
           }
         >
           <RiDashboardFill />
@@ -83,8 +83,8 @@ const BottomNav = () => {
           onClick={() => setActiveNav("/about-us")}
           className={
             activeNav === "/about-us"
-              ? "active text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
-              : "text-2xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+              ? "active text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
+              : "text-4xl text-textColor hover:text-black hover:font-bold flex items-center justify-center hover:bg-gradient-to-tl from-red-500 via-orange-500 to-pink-400 p-2 rounded-lg flex-col"
           }
         >
           <RiTeamFill />

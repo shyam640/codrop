@@ -1,5 +1,4 @@
 import React from "react";
-import "./Home.css";
 import bottomCircleImage from "../../../assets/images/bottom_circle_shadow.png";
 import codechefImage from "../../../assets/images/codechef.png";
 import codeforcesImage from "../../../assets/images/codeforces.png";
@@ -20,7 +19,7 @@ const platforms = [
 const Home = () => {
   return (
     <div className="items-center justify-center">
-      <p className="text-[2.5rem] font-bold tracking-normal shadow-2xl md:shadow-none md:bg-none bg-gradient-to-r from-fuchsia-500 via-purple-500 to-purple-400 p-2 sm:p-4 rounded-lg leading-9 text-red-700">
+      <p className="text-[2.5rem] font-bold tracking-normal shadow-[0px_5px_10px_0px_#bb67ff] md:shadow-none md:bg-none bg-gradient-to-r from-[#bb67ff] to-[#c484f3] p-2 sm:p-4 rounded-lg leading-9 text-red-700">
         Welcome{" "}
         {user && (
           <span className="text-yellow-300 font-medium text-[2rem]">

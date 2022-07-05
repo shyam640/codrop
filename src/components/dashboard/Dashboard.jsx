@@ -1,9 +1,11 @@
 import React from 'react'
-import './Dashboard.css'
+import Cards from "./Cards/Cards";
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className="mt-12">
+      <Cards/>
+    </div>
   )
 }
 

@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemsContainer from "./ItemsContainer";
 import SocialIcons from "./SocialIcons";
 import { Icons } from "./menus";
 import { motion } from "framer-motion";
+import CustomModal from "../CustomModal";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <footer className="bg-gray-900 text-white pb-8 lg:pb-0">
+      <div className="flex flex-col items-center justify-center">
+        {showModal && <CustomModal setOpenModal={setShowModal} />}
+      </div>
       <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-7">
         <h1
           className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold
@@ -27,8 +32,12 @@ const Footer = () => {
           <motion.button
             whileTap={{ scale: 0.8 }}
             type="button"
+            onClick={() => {
+              setShowModal(true);
+            }}
             className="w-fit px-2 py-2.5 flex bg-gradient-to-br from-cyan-500 to-blue-500 hover:from-yellow-300 hover:to-red-500 font-semibold rounded-lg hover:text-black"
           >
+            {showModal && <CustomModal setOpenModal={setShowModal} />}
             Subscribe to Newsletter
             <AiOutlineArrowRight className="animate-spin" />
           </motion.button>
@@ -40,7 +49,7 @@ const Footer = () => {
         <span>
           Created with ❤️ by{" "}
           <Link
-            to={"https://google.com/"}
+            to={"https://google.com/q=its_shyam640"}
             className="text-teal-400 hover:text-black hover:font-bold hover:p-1 hover:rounded-lg bg-gradient-to-br hover:from-yellow-300 hover:to-red-500"
           >
             @its_shyam640

@@ -2,12 +2,12 @@ import { AiOutlineYoutube, AiOutlineGithub, AiOutlineLinkedin, AiOutlineInstagra
 import { FaTelegramPlane } from 'react-icons/fa'
 
 export const PAGES = [
-   { name: "Home", link: "/" },
-   { name: "Library", link: "/library" },
-   { name: "Collab", link: "/collab" },
-   { name: "AI News", link: "/news-ai" },
-   { name: "About-Us", link: "/about-us" },
-   { name: "Updates", link: "/updates" },
+   { name: "Home", link: "/codrop/#/" },
+   { name: "Library", link: "/codrop/#/library" },
+   { name: "Collab", link: "/codrop/#/collab" },
+   { name: "AI News", link: "/codrop/#/news-ai" },
+   { name: "About-Us", link: "/codrop/#/about-us" },
+   { name: "Updates", link: "/codrop/#/updates" },
  ];
  export const PLATFORMS = [
    { name: "Codechef", link: "https://codechef.com" },
@@ -17,8 +17,8 @@ export const PAGES = [
    { name: "Comming Soon", link: "#" },
  ];
  export const COMPANY = [
-   { name: "Gallery", link: "#" },
-   { name: "About us", link: "/about-us" },
+   { name: "Gallery", link: "/codrop/#/updates" },
+   { name: "About us", link: "/codrop/#/about-us" },
    { name: "Press", link: "#" },
    { name: "Customer Stories", link: "#" },
    { name: "Online communities", link: "#" },
@@ -27,8 +27,8 @@ export const PAGES = [
    { name: "Documentation", link: "#" },
    { name: "Tutorials & guides", link: "#" },
    { name: "Webinars", link: "#" },
-   { name: "Open-source", link: "#" },
-   { name: "Terms & Privacy", link: "#" },
+   { name: "Open-source", link: "https://github.com/shyam640/codrop/" },
+   { name: "Terms & Privacy", link: "/codrop/#/about-us" },
  ];
  
  export const Icons = [

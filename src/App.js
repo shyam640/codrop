@@ -13,11 +13,13 @@ import {
   Footer
 } from "./components";
 import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "./utils/ScrollToTopButton";
 
 function App() {
   return (
     <AnimatePresence exitBeforeEnter>
       <div className="w-auto flex flex-col flex-wrap overflow-hidden">
+        <ScrollToTop/>
         <Header/>
         <div className="flex justify-center items-center">
           <BottomNav/>

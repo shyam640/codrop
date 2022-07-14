@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
+
 const user = JSON.parse(localStorage.getItem("user"));
 
 const platforms = [
@@ -112,13 +113,12 @@ const Home = () => {
         <hr className="m-10"></hr>
         <div class="flex items-center flex-wrap mb-20">
           <div class="w-full md:w-1/2">
-            <h4 class="text-3xl text-gray-800 font-bold mb-3">
-              Dashboard
-            </h4>
+            <h4 class="text-3xl text-gray-800 font-bold mb-3">Dashboard</h4>
             <p class="text-gray-600 mb-8">
-              Codrop provides you the dashboard created with React-Charts where you can visualise your rank change. In
-              future updates we will be adding a feature to predict future rating graph on the basis of your Previous
-              performance.
+              Codrop provides you the dashboard created with React-Charts where
+              you can visualise your rank change. In future updates we will be
+              adding a feature to predict future rating graph on the basis of
+              your Previous performance.
             </p>
           </div>
           <div class="w-full md:w-1/2">
@@ -133,8 +133,9 @@ const Home = () => {
           <div class="w-full md:w-1/2 pl-10">
             <h4 class="text-3xl text-gray-800 font-bold mb-3">Library</h4>
             <p class="text-gray-600 mb-8">
-              Now coders can not only visualise their rank. Instead they can improve rank by learning from our
-              library section where we have best ever courses for coders like you.
+              Now coders can not only visualise their rank. Instead they can
+              improve rank by learning from our library section where we have
+              best ever courses for coders like you.
             </p>
           </div>
         </div>
@@ -143,8 +144,9 @@ const Home = () => {
           <div class="w-full md:w-1/2">
             <h4 class="text-3xl text-gray-800 font-bold mb-3">Collab</h4>
             <p class="text-gray-600 mb-8">
-              In future we will come up with collaboration feature with an AI system built-in. We wish to provide
-              best ever experience to our user.
+              In future we will come up with collaboration feature with an AI
+              system built-in. We wish to provide best ever experience to our
+              user.
             </p>
           </div>
           <div class="w-full md:w-1/2">
@@ -166,7 +168,7 @@ const Home = () => {
                 <img
                   alt="gallery"
                   class="w-full object-cover h-full object-center block"
-                  src="../../../assets/images/1.png"
+                  src={commingSoon}
                 />
               </div>
               <div class="md:p-2 p-1 w-1/2">
@@ -220,72 +222,88 @@ const Home = () => {
           {allContests.data?.map((contest) => (
             <div
               key={contest}
-              className="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[400px] bg-slate-50 hover:bg-slate-200 h-fit rounded-[10px] cursor-pointer overflow-hidden backdrop:filter shadow-2xl transition-all transition-250 ease-in-out border-solid border-2 border-sky-300"
+              className="w-full sm:w-[250px] lg:w-[400px] m-4 bg-slate-100 hover:bg-slate-200 h-fit rounded-lg overflow-hidden backdrop:filter shadow-2xl transition-all transition-250 ease-in-out border-solid border-2 border-sky-300"
             >
-              <div className="p-1">
-                <p className="text-lg sm:text-xl lg:text-2xl font-semibold sm:font-bold text-black">
-                  {contest.name}
+              <div className="p-2">
+                <h2 className="font-extrabold">{contest.name}</h2>
+                <p className=" text-lg sm:text-xl lg:text-2xl">
+                  Start Date : <t></t>
+                  <span className="text-[#288e21] inline-block">
+                    {" "}
+                    {new Date(contest.start_time).toLocaleDateString()}
+                  </span>
                 </p>
                 <p className=" text-lg sm:text-xl lg:text-2xl">
-                  Start Time :
-                  <span className="text-[#288e21]">{contest.start_time}</span>
+                  Start Time : <t></t>
+                  <span className="text-[#288e21] inline-block">
+                    {" "}
+                    {new Date(contest.start_time).toLocaleTimeString()}
+                  </span>
                 </p>
                 <p className=" text-lg sm:text-xl lg:text-2xl">
-                  End Time :
-                  <span className="text-red-500">{contest.end_time}</span>
+                  End Date : <t></t>
+                  <span className="text-red-500 inline-block">
+                    {" "}
+                    {new Date(contest.end_time).toLocaleDateString()}
+                  </span>
                 </p>
                 <p className=" text-lg sm:text-xl lg:text-2xl">
-                  Total Duration : <span className="text-blue-500"></span>
-                  {contest.duration}
+                  End Time : <t></t>
+                  <span className="text-red-500 inline-block">
+                    {" "}
+                    {new Date(contest.end_time).toLocaleTimeString()}
+                  </span>
+                </p>
+                <p className="text-lg sm:text-xl lg:text-2xl">
+                  Total Duration : <t></t>
+                  <span className="text-blue-500 inline-block">
+                    {Math.floor(parseInt(contest.duration) / (24 * 3600)) +
+                      " days " +
+                      Math.floor(parseInt(contest.duration)%(24 * 3600) / 3600) +
+                      " hours " +
+                      Math.floor(parseInt(contest.duration) % (3600) / 60) +
+                      " minutes " +
+                      Math.floor(parseInt(contest.duration) % 60) +
+                      " seconds"}
+                  </span>
                 </p>
                 <p className="font-bold text-lg sm:text-xl lg:text-2xl">
-                  In Next 24 Hours : {contest.in_24_hours}
+                  In Next 24 Hours :{" "}
+                  <span className="inline-block"> {contest.in_24_hours}</span>
                 </p>
                 <div className="flex flex-wrap justify-evenly">
                   <motion.a
                     whileTap={{ scale: 0.8 }}
                     href={contest.url}
                     target="_blank"
-                    className="w-full sm:w-fit text-lg hover:text-xl sm:text-lg lg:text-xl text-black bg-gradient-to-br from-cyan-500 to-blue-500 hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-red-500 px-2 py-1 font-semibold flex items-center justify-center gap-1 rounded-lg hover:text-black"
+                    className="w-fit text-lg hover:text-xl sm:text-lg lg:text-xl text-black bg-gradient-to-br from-cyan-500 to-blue-500 hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-red-500 px-[9px] py-[7px] font-semibold flex items-center justify-center gap-1 rounded-lg hover:text-black"
                   >
-                    Visit Contest
+                    VISIT CONTEST
                   </motion.a>
                 </div>
               </div>
-              <span className="w-full h-[40px] sm:h-[80px] mt-5 text-lg text-black bg-gradient-to-br from-pink-300 to-purple-500 py-1 font-semibold flex items-center justify-center rounded-t-lg hover:text-black">
-                {contest.site}
+              <span className="w-full h-[80px] sm:h-[100px] mt-5 text-2xl font-extrabold text-black bg-gradient-to-br from-pink-300 to-purple-500 py-1 flex items-center text-center justify-center rounded-t-lg hover:text-black">
+                PLATFORM : {contest.site.toString().toUpperCase()}
               </span>
             </div>
           ))}
         </div>
       </div>
 
-      <section class="text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4 text-center">
+      <section class="text-gray-400 bg-gray-900 body-font mt-5">
+        <div class="px-5 py-10 mx-auto">
+          <div class="flex flex-wrap items-center justify-center -m-4 text-center">
             <div class="p-4 sm:w-1/4 w-1/2">
               <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">
-                2.7K
+                10
+              </h2>
+              <p class="leading-relaxed">Daily Visitors</p>
+            </div>
+            <div class="p-4 sm:w-1/4 w-1/2">
+              <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">
+                23
               </h2>
               <p class="leading-relaxed">Users</p>
-            </div>
-            <div class="p-4 sm:w-1/4 w-1/2">
-              <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">
-                1.8K
-              </h2>
-              <p class="leading-relaxed">Subscribes</p>
-            </div>
-            <div class="p-4 sm:w-1/4 w-1/2">
-              <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">
-                35
-              </h2>
-              <p class="leading-relaxed">Downloads</p>
-            </div>
-            <div class="p-4 sm:w-1/4 w-1/2">
-              <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">
-                4
-              </h2>
-              <p class="leading-relaxed">Products</p>
             </div>
           </div>
         </div>

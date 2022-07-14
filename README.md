@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+<img src="./src/assets/images/logo.png" alt="logo"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CoDrop | Drop Point for Daily Coders (React Progressive Web App)
+coDrop is a learning and performance tracking platform for daily coders like you and me. We provide a complete visualization to your increment and decrement in your profile. This isn’t a learn-to-code platform in and of itself, but it’s a tremendous collection of programming materials selected by the community. Codrop act as an intermediate to make your navigation easy and fast.
 
-## Available Scripts
+<img src="./src/assets/images/logo_text.png" alt="logo"/>
 
-In the project directory, you can run:
+## Production Link
+#### https://shyam640.github.io/codrop/
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Running Locally
+Step 1 : Fork this project and save it locally using command ```gh repo clone shyam640/codrop``` or download it in zip format.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Step 2 : Open terminal and write command ```npm install```
 
-### `npm test`
+Step 3 : Go to ```localhost:3000```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Frontend
+- This app is compatible for all type of device screens (640px, 768px, 1024px, 1280px, 1536px).
+- App installable on any type of device IOS or Android.
+- Dashboard have chart which are customizable and easy render for all type of devices.
+- Easy and fast navigation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Backend
+- Completely private and backend written in nodejs.
+- Has private .env folder which has all the secret keys.
+- Google based authentication to reduce fake id login.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API
+- Codrop has a Rest-API which fetches your data from different coding platforms.
+- Codrop uses multiple public api to provide you with the best resources.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contribution
+Fork this repository and start contributing to it.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -8,7 +8,7 @@ const Updates = () => {
   const [commits, setCommits] = useState([]);
   const [prevRepoCommits, setPrevRepoCommits] = useState([]);
   const octokit = new Octokit({
-    auth: process.env.REACT_APP_CODROP_GITHUB_TOKEN,
+    auth: `${process.env.REACT_APP_CODROP_GITHUB_TOKEN}`,
   });
 
   useEffect(() => {
@@ -36,12 +36,11 @@ const Updates = () => {
 
   return (
     <div className="flex justify-center items-center m-2 sm:p-4">
-      <div className="">
-        <h3 class="text-2xl text-gray-700 font-bold mb-6 -ml-3">
+      <div className="border-solid border-l-4 border-blue-600">
+        <h3 class="text-2xl text-gray-700 font-bold -mt-4 mb-6 -ml-3">
           Updates Timeline
         </h3>
 
-        <ol class="border-l-2 border-blue-600">
           {commits.data?.map((d) => (
             <li key={d} className='flex flex-col flex-start'>
               <div class="w-full h-auto">
@@ -75,7 +74,7 @@ const Updates = () => {
                       target="_blank"
                       class="font-medium text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm"
                     >
-                      Commit Date : {d.commit.committer.date}
+                      Commit Date : {new Date(d.commit.committer.date).toLocaleString()}
                     </a>
                   </div>
                   <p className="mt-1 flex overflow-hidden">Description : {d.commit.message}</p>
@@ -217,7 +216,6 @@ const Updates = () => {
           ))}
 
           
-        </ol>
       </div>
       <div></div>
     </div>

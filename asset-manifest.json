@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/codrop/static/css/main.4c5401ca.css",
-    "main.js": "/codrop/static/js/main.a0d24fae.js",
+    "main.css": "/codrop/static/css/main.ec3b4877.css",
+    "main.js": "/codrop/static/js/main.3c561ac4.js",
     "static/js/787.424581ce.chunk.js": "/codrop/static/js/787.424581ce.chunk.js",
     "static/media/water_splash.png": "/codrop/static/media/water_splash.a4669c50103130db91cd.png",
     "static/media/commin_soon.png": "/codrop/static/media/commin_soon.539cf09081a826480035.png",
@@ -14,6 +14,7 @@
     "static/media/comming_soon.png": "/codrop/static/media/comming_soon.e2ea8b0758a25ebf2b6f.png",
     "static/media/logo.png": "/codrop/static/media/logo.32c2ffbc838502f698ee.png",
     "service-worker.js": "/codrop/service-worker.js",
+    "static/media/comming_up.png": "/codrop/static/media/comming_up.d74c8cf18298f80b721f.png",
     "static/media/bottom_circle_shadow.png": "/codrop/static/media/bottom_circle_shadow.215469d205e6f99ae32b.png",
     "static/media/codechef.png": "/codrop/static/media/codechef.bcdfd2357a88ee0e469e.png",
     "static/media/leetcode.png": "/codrop/static/media/leetcode.c78fc082f2b4c496259f.png",
@@ -21,12 +22,12 @@
     "static/media/logo_text.png": "/codrop/static/media/logo_text.a57a06bfba418c2f38b8.png",
     "static/media/codeforces.png": "/codrop/static/media/codeforces.d22b5260605abf0255a7.png",
     "index.html": "/codrop/index.html",
-    "main.4c5401ca.css.map": "/codrop/static/css/main.4c5401ca.css.map",
-    "main.a0d24fae.js.map": "/codrop/static/js/main.a0d24fae.js.map",
+    "main.ec3b4877.css.map": "/codrop/static/css/main.ec3b4877.css.map",
+    "main.3c561ac4.js.map": "/codrop/static/js/main.3c561ac4.js.map",
     "787.424581ce.chunk.js.map": "/codrop/static/js/787.424581ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c5401ca.css",
-    "static/js/main.a0d24fae.js"
+    "static/css/main.ec3b4877.css",
+    "static/js/main.3c561ac4.js"
   ]
 }

@@ -17,11 +17,11 @@ const Dashboard = () => {
       cc_username !== undefined ||
       cc_username !== null
     ) {
-      const ccData = await axios.get(
-        `${process.env.REACT_APP_CP_BASE_URL}` + "codechef/" + `${cc_username}`,
-        { headers: { Accept: "application/json" } }
-      );
-      localStorage.setItem("codechef_data", JSON.stringify(ccData.data));
+      // const ccData = await axios.get(
+      //   `${process.env.REACT_APP_CP_BASE_URL}` + "codechef/" + `${cc_username}`,
+      //   { headers: { Accept: "application/json" } }
+      // );
+      // localStorage.setItem("codechef_data", JSON.stringify(ccData.data));
     }
 
     const cf_username = localStorage.getItem("cf_username");
@@ -31,13 +31,13 @@ const Dashboard = () => {
       cf_username !== undefined ||
       cf_username !== null
     ) {
-      const cfData = await axios.get(
-        `${process.env.REACT_APP_CP_BASE_URL}` +
-          "codeforces/" +
-          `${cf_username}`,
-        { headers: { Accept: "application/json" } }
-      );
-      localStorage.setItem("codeforces_data", JSON.stringify(cfData.data));
+      // const cfData = await axios.get(
+      //   `${process.env.REACT_APP_CP_BASE_URL}` +
+      //     "codeforces/" +
+      //     `${cf_username}`,
+      //   { headers: { Accept: "application/json" } }
+      // );
+      // localStorage.setItem("codeforces_data", JSON.stringify(cfData.data));
     }
 
     const lc_username = localStorage.getItem("lc_username");
@@ -47,12 +47,12 @@ const Dashboard = () => {
       lc_username !== undefined ||
       lc_username !== null
     ) {
-      const lcData = await axios.get(
-        `${process.env.REACT_APP_CP_BASE_URL}` + "leetcode/" + `${lc_username}`,
-        { headers: { Accept: "application/json" } }
-      );
-      // console.log(lcData);
-      localStorage.setItem("leetcode_data", JSON.stringify(lcData.data));
+      // const lcData = await axios.get(
+      //   `${process.env.REACT_APP_CP_BASE_URL}` + "leetcode/" + `${lc_username}`,
+      //   { headers: { Accept: "application/json" } }
+      // );
+      // // console.log(lcData);
+      // localStorage.setItem("leetcode_data", JSON.stringify(lcData.data));
       // console.log(localStorage.getItem("leetcode_data"));
     }
   }
@@ -77,94 +77,94 @@ const Dashboard = () => {
       document.getElementById("leetcode_username").value
     );
 
-    await fetchData();
+    // await fetchData();
   };
 
-  const codechefContests = [];
-  const codechefContestsRatings = [];
-  if (JSON.parse(localStorage.getItem("codechef_data"))!==undefined && JSON.parse(localStorage.getItem("codechef_data")).contest_ratings!==undefined) {
-    JSON.parse(localStorage.getItem("codechef_data")).contest_ratings.forEach(
-      (contest) => {
-        codechefContests.push(contest.code);
-        codechefContestsRatings.push(parseInt(contest.rating));
-      }
-    );
-  }
+  // const codechefContests = [];
+  // const codechefContestsRatings = [];
+  // if (JSON.parse(localStorage.getItem("codechef_data"))!==undefined && JSON.parse(localStorage.getItem("codechef_data")).contest_ratings!==undefined) {
+  //   JSON.parse(localStorage.getItem("codechef_data")).contest_ratings.forEach(
+  //     (contest) => {
+  //       codechefContests.push(contest.code);
+  //       codechefContestsRatings.push(parseInt(contest.rating));
+  //     }
+  //   );
+  // }
 
-  const codeforcesContests = [];
-  const codeforcesContestsRatings = [];
-  if (JSON.parse(localStorage.getItem("codechef_data"))!==undefined && JSON.parse(localStorage.getItem("codeforces_data")).contests!==undefined) {
-    JSON.parse(localStorage.getItem("codeforces_data")).contests.forEach(
-      (contest) => {
-        codeforcesContests.push(
-          contest.Contest.replace("Codeforces Round ", "")
-        );
-        codeforcesContestsRatings.push(parseInt(contest["New Rating"]));
-      }
-    );
-  }
+  // const codeforcesContests = [];
+  // const codeforcesContestsRatings = [];
+  // if (JSON.parse(localStorage.getItem("codechef_data"))!==undefined && JSON.parse(localStorage.getItem("codeforces_data")).contests!==undefined) {
+  //   JSON.parse(localStorage.getItem("codeforces_data")).contests.forEach(
+  //     (contest) => {
+  //       codeforcesContests.push(
+  //         contest.Contest.replace("Codeforces Round ", "")
+  //       );
+  //       codeforcesContestsRatings.push(parseInt(contest["New Rating"]));
+  //     }
+  //   );
+  // }
 
-  // console.log(codeforcesContests);
-  // console.log(codeforcesContestsRatings);
+  // // console.log(codeforcesContests);
+  // // console.log(codeforcesContestsRatings);
 
-  const cardsData = [
-    {
-      title: "Codechef",
-      color: {
-        backGround: "linear-gradient(180deg, #9d53da 0%, #a03be8 100%)",
-        boxShadow: "0px 10px 20px 0px #e0c6f5",
-      },
-      highest_rating: JSON.parse(localStorage.getItem("codechef_data"))
-        .highest_rating,
-      barValue:
-        (JSON.parse(localStorage.getItem("codechef_data")).highest_rating -
-          JSON.parse(localStorage.getItem("codechef_data")).rating) %
-        100,
-      icon: AiOutlineArrowDown,
-      x_axis: codechefContests,
-      y_axis: codechefContestsRatings,
-    },
-    {
-      title: "Codeforces",
-      color: {
-        backGround: "linear-gradient(180deg, #c94857 0%, #fa3145 100%)",
-        boxShadow: "0px 10px 20px 0px #FDC0C7",
-      },
-      highest_rating: JSON.parse(localStorage.getItem("codeforces_data"))[
-        "max rating"
-      ],
-      barValue:
-        (JSON.parse(localStorage.getItem("codeforces_data"))["max rating"] -
-          JSON.parse(localStorage.getItem("codeforces_data")).rating) %
-        100,
-      icon: AiOutlineArrowDown,
-      x_axis: codeforcesContests,
-      y_axis: codeforcesContestsRatings.reverse(),
-    },
-    {
-      title: "Leetcode",
-      color: {
-        backGround:
-          "linear-gradient(rgb(248, 190, 98) -146.42%, rgb(251, 175, 43) -46.42%)",
-        boxShadow: "0px 10px 20px 0px #F9D59B",
-      },
-      highest_rating: JSON.parse(localStorage.getItem("leetcode_data"))
-        .contribution_points,
-      barValue: (JSON.parse(
-        localStorage.getItem("leetcode_data")
-      ).acceptance_rate!==undefined) ? JSON.parse(
-        localStorage.getItem("leetcode_data")
-      ).acceptance_rate.replace("%", "") : 0,
-      icon: AiOutlineArrowDown,
-      x_axis: ["Easy Solved", "Medium Solved", "Hard Solved"],
-      y_axis: [
-        JSON.parse(localStorage.getItem("leetcode_data")).easy_questions_solved,
-        JSON.parse(localStorage.getItem("leetcode_data"))
-          .medium_questions_solved,
-        JSON.parse(localStorage.getItem("leetcode_data")).hard_questions_solved,
-      ],
-    },
-  ];
+  // const cardsData = [
+  //   {
+  //     title: "Codechef",
+  //     color: {
+  //       backGround: "linear-gradient(180deg, #9d53da 0%, #a03be8 100%)",
+  //       boxShadow: "0px 10px 20px 0px #e0c6f5",
+  //     },
+  //     highest_rating: JSON.parse(localStorage.getItem("codechef_data"))
+  //       .highest_rating,
+  //     barValue:
+  //       (JSON.parse(localStorage.getItem("codechef_data")).highest_rating -
+  //         JSON.parse(localStorage.getItem("codechef_data")).rating) %
+  //       100,
+  //     icon: AiOutlineArrowDown,
+  //     x_axis: codechefContests,
+  //     y_axis: codechefContestsRatings,
+  //   },
+  //   {
+  //     title: "Codeforces",
+  //     color: {
+  //       backGround: "linear-gradient(180deg, #c94857 0%, #fa3145 100%)",
+  //       boxShadow: "0px 10px 20px 0px #FDC0C7",
+  //     },
+  //     highest_rating: JSON.parse(localStorage.getItem("codeforces_data"))[
+  //       "max rating"
+  //     ],
+  //     barValue:
+  //       (JSON.parse(localStorage.getItem("codeforces_data"))["max rating"] -
+  //         JSON.parse(localStorage.getItem("codeforces_data")).rating) %
+  //       100,
+  //     icon: AiOutlineArrowDown,
+  //     x_axis: codeforcesContests,
+  //     y_axis: codeforcesContestsRatings.reverse(),
+  //   },
+  //   {
+  //     title: "Leetcode",
+  //     color: {
+  //       backGround:
+  //         "linear-gradient(rgb(248, 190, 98) -146.42%, rgb(251, 175, 43) -46.42%)",
+  //       boxShadow: "0px 10px 20px 0px #F9D59B",
+  //     },
+  //     highest_rating: JSON.parse(localStorage.getItem("leetcode_data"))
+  //       .contribution_points,
+  //     barValue: (JSON.parse(
+  //       localStorage.getItem("leetcode_data")
+  //     ).acceptance_rate!==undefined) ? JSON.parse(
+  //       localStorage.getItem("leetcode_data")
+  //     ).acceptance_rate.replace("%", "") : 0,
+  //     icon: AiOutlineArrowDown,
+  //     x_axis: ["Easy Solved", "Medium Solved", "Hard Solved"],
+  //     y_axis: [
+  //       JSON.parse(localStorage.getItem("leetcode_data")).easy_questions_solved,
+  //       JSON.parse(localStorage.getItem("leetcode_data"))
+  //         .medium_questions_solved,
+  //       JSON.parse(localStorage.getItem("leetcode_data")).hard_questions_solved,
+  //     ],
+  //   },
+  // ];
 
   return (
     <div className="mt-12">
@@ -220,7 +220,7 @@ const Dashboard = () => {
         </form>
       </div>
       <div className="flex flex-wrap items-center justify-evenly gap-[10px]">
-        {cardsData.map((card, id) => {
+        {/* {cardsData.map((card, id) => {
           return (
             <div key={id}>
               <Card
@@ -235,7 +235,7 @@ const Dashboard = () => {
               />
             </div>
           );
-        })}
+        })} */}
       </div>
     </div>
   );

@@ -8,56 +8,56 @@ import axios from "axios";
 const Dashboard = () => {
   const form = useRef();
 
-  async function fetchData() {
-    const cc_username = localStorage.getItem("cc_username");
-    // console.log(cc_username, typeof cc_username);
+  // async function fetchData() {
+  //   const cc_username = localStorage.getItem("cc_username");
+  //   // console.log(cc_username, typeof cc_username);
 
-    if (
-      cc_username !== "" ||
-      cc_username !== undefined ||
-      cc_username !== null
-    ) {
-      // const ccData = await axios.get(
-      //   `${process.env.REACT_APP_CP_BASE_URL}` + "codechef/" + `${cc_username}`,
-      //   { headers: { Accept: "application/json" } }
-      // );
-      // localStorage.setItem("codechef_data", JSON.stringify(ccData.data));
-    }
+  //   if (
+  //     cc_username !== "" ||
+  //     cc_username !== undefined ||
+  //     cc_username !== null
+  //   ) {
+  //     const ccData = await axios.get(
+  //       `${process.env.REACT_APP_CP_BASE_URL}` + "codechef/" + `${cc_username}`,
+  //       { headers: { Accept: "application/json" } }
+  //     );
+  //     localStorage.setItem("codechef_data", JSON.stringify(ccData.data));
+  //   }
 
-    const cf_username = localStorage.getItem("cf_username");
+  //   const cf_username = localStorage.getItem("cf_username");
 
-    if (
-      cf_username !== "" ||
-      cf_username !== undefined ||
-      cf_username !== null
-    ) {
-      // const cfData = await axios.get(
-      //   `${process.env.REACT_APP_CP_BASE_URL}` +
-      //     "codeforces/" +
-      //     `${cf_username}`,
-      //   { headers: { Accept: "application/json" } }
-      // );
-      // localStorage.setItem("codeforces_data", JSON.stringify(cfData.data));
-    }
+  //   if (
+  //     cf_username !== "" ||
+  //     cf_username !== undefined ||
+  //     cf_username !== null
+  //   ) {
+  //     // const cfData = await axios.get(
+  //     //   `${process.env.REACT_APP_CP_BASE_URL}` +
+  //     //     "codeforces/" +
+  //     //     `${cf_username}`,
+  //     //   { headers: { Accept: "application/json" } }
+  //     // );
+  //     // localStorage.setItem("codeforces_data", JSON.stringify(cfData.data));
+  //   }
 
-    const lc_username = localStorage.getItem("lc_username");
+  //   const lc_username = localStorage.getItem("lc_username");
 
-    if (
-      lc_username !== "" ||
-      lc_username !== undefined ||
-      lc_username !== null
-    ) {
-      // const lcData = await axios.get(
-      //   `${process.env.REACT_APP_CP_BASE_URL}` + "leetcode/" + `${lc_username}`,
-      //   { headers: { Accept: "application/json" } }
-      // );
-      // // console.log(lcData);
-      // localStorage.setItem("leetcode_data", JSON.stringify(lcData.data));
-      // console.log(localStorage.getItem("leetcode_data"));
-    }
-  }
+  //   if (
+  //     lc_username !== "" ||
+  //     lc_username !== undefined ||
+  //     lc_username !== null
+  //   ) {
+  //     // const lcData = await axios.get(
+  //     //   `${process.env.REACT_APP_CP_BASE_URL}` + "leetcode/" + `${lc_username}`,
+  //     //   { headers: { Accept: "application/json" } }
+  //     // );
+  //     // // console.log(lcData);
+  //     // localStorage.setItem("leetcode_data", JSON.stringify(lcData.data));
+  //     // console.log(localStorage.getItem("leetcode_data"));
+  //   }
+  // }
 
-  fetchData();
+  // fetchData();
 
   const saveData = async (e) => {
     // e.preventDefault();
